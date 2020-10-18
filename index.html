@@ -1,0 +1,657 @@
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UMA SHOP</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,600,700,800,900&amp;display=swap">
+    <link rel="shortcut icon" type="image/ico" href="favicon.ico">
+    <link rel="stylesheet" href="style.css">
+    <script src="index.js"></script>
+</head>
+
+<body class="">
+    <!-- Comienzo Header-->
+    <header class="main-header">
+        <div class="main-header-container">
+            <div class="logo-container">
+                <img src="./perrito.png" alt="" aria-hidden="true" class="logo">
+                <p>UMA SHOP</p>
+            </div>
+            <div class="main-header-buttons">
+                <button type="button" class="open-cart-btn" aria-expanded="false" aria-controls="cart" tabindex="0">
+                    <i class="fas fa-shopping-cart" aria-hidden="true"> </i>
+                    Carrito (<span class="cart-qty" aria-hidden="true">0</span> items)
+                </button>
+            </div>
+        </div>
+        <div class="banner">
+            <h1 class="category-name"> pet shop</h1>
+        </div>
+    </header>
+
+    <!-- Fin Header  -->
+
+    <main>
+        <!--  Comienzo Filtros -->
+        <section class="filters" aria-labelledby="filters-heading" id="filters">
+            <button type="button" class="close-filters-btn" aria-label="Cerrar filtros" tabindex="0">
+                <i class="fas fa-times" aria-hidden="true"></i>
+            </button>
+
+            <!-- Comienzo Búsqueda -->
+            <div class="filter-container">
+                <div class="filters-heading-container">
+                    <h2 class="filters-heading">FILTROS</h2>
+                    <button type="button" class="filters-clear-btn" tabindex="0">
+                        <i class="fas fa-trash-alt" aria-hidden="true"></i> Limpiar
+                    </button>
+                </div>
+            </div>
+            <div class="filter-container">
+                <h3 class="filter-name">BÚSQUEDA</h3>
+                <label class="search-container" aria-label="Búsqueda">
+                    <input type="text" class="search-input" name="Búsqueda" aria-controls="product-list"
+                        placeholder="Buscar productos" tabindex="0">
+                    <i class="fas fa-search" aria-hidden="true"></i>
+                </label>
+            </div>
+            <!--  Fin Búsqueda -->
+
+            <!--  Comienzo Filtros Categoría-->
+            <div class="filter-container">
+                <h3 class="filter-name">CATEGORÍA</h3>
+                <label>
+                    <input type="checkbox" value="ropa" class="filter category-filter" tabindex="0">
+                    ROPA
+                </label>
+                <label>
+                    <input type="checkbox" value="transporte" class="filter category-filter" tabindex="0">
+                    TRANSPORTE
+                </label>
+                <label>
+                    <input type="checkbox" value="camas" class="filter category-filter" tabindex="0">
+                    CAMAS
+                </label>
+                <label>
+                    <input type="checkbox" value="comida" class="filter category-filter" tabindex="0">
+                    COMIDA
+                </label>
+                <label>
+                    <input type="checkbox" value="accesorios" class="filter category-filter" tabindex="0">
+                    ACCESORIOS
+                </label>
+            </div>
+            <!-- Fin Filtros Categoría  -->
+
+            <!-- Comienzo Filtros Puntaje -->
+            <div class="filter-container">
+                <h3 class="filter-name">PUNTAJE</h3>
+                <label>
+                    <input type="checkbox" name="review" class="filter review-filter" value="5" tabindex="0">
+                    <div class="review">
+                        <i class="fas fa-star" aria-hidden="true"></i>
+                        <i class="fas fa-star" aria-hidden="true"></i>
+                        <i class="fas fa-star" aria-hidden="true"></i>
+                        <i class="fas fa-star" aria-hidden="true"></i>
+                        <i class="fas fa-star" aria-hidden="true"></i>
+                    </div>
+                    (5)
+                </label>
+                <label>
+                    <input type="checkbox" name="review" class="filter review-filter" value="4" tabindex="0">
+                    <div class="review">
+                        <i class="fas fa-star" aria-hidden="true"></i>
+                        <i class="fas fa-star" aria-hidden="true"></i>
+                        <i class="fas fa-star" aria-hidden="true"></i>
+                        <i class="fas fa-star" aria-hidden="true"></i>
+                        <i class="far fa-star" aria-hidden="true"></i>
+                    </div>
+                    (4)
+                </label>
+                <label>
+                    <input type="checkbox" name="review" class="filter review-filter" value="3" tabindex="0">
+                    <div class="review">
+                        <i class="fas fa-star" aria-hidden="true"></i>
+                        <i class="fas fa-star" aria-hidden="true"></i>
+                        <i class="fas fa-star" aria-hidden="true"></i>
+                        <i class="far fa-star" aria-hidden="true"></i>
+                        <i class="far fa-star" aria-hidden="true"></i>
+                    </div>
+                    (3)
+                </label>
+                <label>
+                    <input type="checkbox" name="review" class="filter review-filter" value="2" tabindex="0">
+                    <div class="review">
+                        <i class="fas fa-star" aria-hidden="true"></i>
+                        <i class="fas fa-star" aria-hidden="true"></i>
+                        <i class="far fa-star" aria-hidden="true"></i>
+                        <i class="far fa-star" aria-hidden="true"></i>
+                        <i class="far fa-star" aria-hidden="true"></i>
+                    </div>
+                    (2)
+                </label>
+                <label>
+                    <input type="checkbox" name="review" class="filter review-filter" value="1" tabindex="0">
+                    <div class="review">
+                        <i class="fas fa-star" aria-hidden="true"></i>
+                        <i class="far fa-star" aria-hidden="true"></i>
+                        <i class="far fa-star" aria-hidden="true"></i>
+                        <i class="far fa-star" aria-hidden="true"></i>
+                        <i class="far fa-star" aria-hidden="true"></i>
+                    </div>
+                    (1)
+                </label>
+            </div>
+            <!-- [ Fin Filtros Puntaje  -->
+        </section>
+        <!--  Fin Filtros -->
+
+        <!--  Comienzo Productos -->
+        <section>
+            <header class="products-control">
+                <!-- <h1>pet shop</h1> -->
+                <p class="filtered-products-qty" aria-live="polite" id="product-list">Mostrando 12 producto(s) de 12</p>
+                <button type="button" class="open-filters-btn" aria-label="Abrir filtros" aria-expanded="false"
+                    aria-controls="filters" tabindex="0">
+                    <i class="fas fa-filter" aria-hidden="true"></i>
+                    Filtros
+                </button>
+                <div class="view-buttons">
+                    Ver como
+                    <button type="button" class="view-btn show-grid-btn" aria-label="Mostrar productos como lista"
+                        tabindex="0">
+                        <i class="fas fa-th" aria-hidden="true"></i>
+                    </button>
+                    <button type="button" class="view-btn show-list-btn" aria-label="Mostrar productos como grilla"
+                        tabindex="0">
+                        <i class="fas fa-list" aria-hidden="true"></i>
+                    </button>
+                </div>
+            </header>
+            <div class="products">
+                <article class="product" data-id="0" data-name="buso" data-category="ROPA" data-price="499"
+                    data-review="3">
+                    <div class="product-img-container">
+                        <img src="./ropa linda perros.jpeg" alt="" class="product-img">
+                    </div>
+                    <div class="product-body">
+                        <div class="product-content">
+                            <h3 class="product-name">buso</h3>
+                            <p class="product-price">$ 499</p>
+                            <p class="product-description">
+                                Busito para perros pequeños, ideal para el frio.
+                                100% algodon
+                            </p>
+                            <div class="review">
+                                <i class="fas fa-star" aria-hidden="true"></i>
+                                <i class="fas fa-star" aria-hidden="true"></i>
+                                <i class="fas fa-star" aria-hidden="true"></i>
+                                <i class="far fa-star" aria-hidden="true"></i>
+                                <i class="far fa-star" aria-hidden="true"></i>
+                            </div>
+                        </div>
+                        <div class="product-actions">
+                            <button type="button" class="button button-default add-to-cart-btn" tabindex="0">
+                                Comprar
+                            </button>
+                        </div>
+                    </div>
+                </article>
+                <article class="product" data-id="1" data-name="COLLARES" data-category="ACCESORIOS" data-price="100"
+                    data-image="imagenes tienda/collar perros.jpg" data-review="5">
+                    <div class="product-img-container">
+                        <img src="./collar perros.jpg" alt="" class="product-img">
+                    </div>
+                    <div class="product-body">
+                        <div class="product-content">
+                            <h3 class="product-name">COLLAR</h3>
+                            <p class="product-price">$ 100</p>
+                            <p class="product-description">
+                                collar para mascotas, cute, lindo.
+                                varios colores. Super resistentes.
+
+                            </p>
+                            <div class="review">
+                                <i class="fas fa-star" aria-hidden="true"></i>
+                                <i class="fas fa-star" aria-hidden="true"></i>
+                                <i class="fas fa-star" aria-hidden="true"></i>
+                                <i class="fas fa-star" aria-hidden="true"></i>
+                                <i class="fas fa-star" aria-hidden="true"></i>
+                            </div>
+                        </div>
+                        <div class="product-actions">
+                            <button type="button" class="button button-default add-to-cart-btn" tabindex="0">
+                                Comprar
+                            </button>
+                        </div>
+                    </div>
+                </article>
+                <article class="product" data-id="2" data-name=buso-stich data-category="ROPA" data-price="999"
+                    data-image="images/ropa stich.jpg" data-review="2">
+                    <div class="product-img-container">
+                        <img src="./ropa stich.jpeg" alt="" class="product-img">
+                    </div>
+                    <div class="product-body">
+                        <div class="product-content">
+                            <h3 class="product-name">buso-stich</h3>
+                            <p class="product-price">$ 999</p>
+                            <p class="product-description">
+                                Buso stich 100% algodon, lavable.
+                                talle small.
+                            </p>
+                            <div class="review">
+                                <i class="fas fa-star" aria-hidden="true"></i>
+                                <i class="fas fa-star" aria-hidden="true"></i>
+                                <i class="far fa-star" aria-hidden="true"></i>
+                                <i class="far fa-star" aria-hidden="true"></i>
+                                <i class="far fa-star" aria-hidden="true"></i>
+                            </div>
+                        </div>
+                        <div class="product-actions">
+                            <button type="button" class="button button-default add-to-cart-btn" tabindex="0">
+                                Comprar
+                            </button>
+                        </div>
+                    </div>
+                </article>
+                <article class="product" data-id="3" data-name="comida pedrigee" data-category="COMIDA" data-price="600"
+                    data-image="images/comida-perros-3.png" data-review="3">
+                    <div class="product-img-container">
+                        <img src="./comida-perros-3.png" alt="" class="product-img">
+                    </div>
+                    <div class="product-body">
+                        <div class="product-content">
+                            <h3 class="product-name">comida-pedrigee</h3>
+                            <p class="product-price">$ 600</p>
+                            <p class="product-description">
+                                Alimento para tu mascota pedrigee.
+                                3 kilos.
+                                perro adulto y cachorro.
+                            </p>
+                            <div class="review">
+                                <i class="fas fa-star" aria-hidden="true"></i>
+                                <i class="fas fa-star" aria-hidden="true"></i>
+                                <i class="fas fa-star" aria-hidden="true"></i>
+                                <i class="far fa-star" aria-hidden="true"></i>
+                                <i class="far fa-star" aria-hidden="true"></i>
+                            </div>
+                        </div>
+                        <div class="product-actions">
+                            <button type="button" class="button button-default add-to-cart-btn" tabindex="0">
+                                Comprar
+                            </button>
+                        </div>
+                    </div>
+                </article>
+                <article class="product" data-id="4" data-name="transportadora" data-category="TRANSPORTE"
+                    data-price="4699" data-image="images/transportadora.jpg" data-review="5">
+                    <div class="product-img-container">
+                        <img src="./transportadora.jpeg" alt="" class="product-img">
+                    </div>
+                    <div class="product-body">
+                        <div class="product-content">
+                            <h3 class="product-name">transportadora </h3>
+                            <p class="product-price">$ 4699</p>
+                            <p class="product-description">
+                                Transportadora, varios colores, ideal 20 kilos
+                                reforzado
+                            </p>
+                            <div class="review">
+                                <i class="fas fa-star" aria-hidden="true"></i>
+                                <i class="fas fa-star" aria-hidden="true"></i>
+                                <i class="fas fa-star" aria-hidden="true"></i>
+                                <i class="fas fa-star" aria-hidden="true"></i>
+                                <i class="fas fa-star" aria-hidden="true"></i>
+                            </div>
+                        </div>
+                        <div class="product-actions">
+                            <button type="button" class="button button-default add-to-cart-btn" tabindex="0">
+                                Comprar
+                            </button>
+                        </div>
+                    </div>
+                </article>
+                <article class="product" data-id="5" data-name="cama elegante" data-category="CAMAS" data-price="3299"
+                    data-image="images/cama elegante.png" data-review="1">
+                    <div class="product-img-container">
+                        <img src="./cama elegante.jpeg" alt="" class="product-img">
+                    </div>
+                    <div class="product-body">
+                        <div class="product-content">
+                            <h3 class="product-name">cama</h3>
+                            <p class="product-price">$ 3299</p>
+                            <p class="product-description">
+                                cama de dos pisos
+                                resistente perros adultos y cachorros
+                            </p>
+                            <div class="review">
+                                <i class="fas fa-star" aria-hidden="true"></i>
+                                <i class="far fa-star" aria-hidden="true"></i>
+                                <i class="far fa-star" aria-hidden="true"></i>
+                                <i class="far fa-star" aria-hidden="true"></i>
+                                <i class="far fa-star" aria-hidden="true"></i>
+                            </div>
+                        </div>
+                        <div class="product-actions">
+                            <button type="button" class="button button-default add-to-cart-btn" tabindex="0">
+                                Comprar
+                            </button>
+                        </div>
+                    </div>
+                </article>
+                <article class="product" data-id="6" data-name="coche" data-category="TRANSPORTE" data-price="27999"
+                     data-review="3">
+                    <div class="product-img-container">
+                        <img src="./coche para perro.jpeg" alt="" class="product-img">
+                    </div>
+                    <div class="product-body">
+                        <div class="product-content">
+                            <h3 class="product-name">coche</h3>
+                            <p class="product-price">$ 27999</p>
+                            <p class="product-description">
+                                cochecito para perros.
+                                15 kilos, resistente
+                            </p>
+                            <div class="review">
+                                <i class="fas fa-star" aria-hidden="true"></i>
+                                <i class="fas fa-star" aria-hidden="true"></i>
+                                <i class="fas fa-star" aria-hidden="true"></i>
+                                <i class="far fa-star" aria-hidden="true"></i>
+                                <i class="far fa-star" aria-hidden="true"></i>
+                            </div>
+                        </div>
+                        <div class="product-actions">
+                            <button type="button" class="button button-default add-to-cart-btn" tabindex="0">
+                                Comprar
+                            </button>
+                        </div>
+                    </div>
+                </article>
+                <article class="product" data-id="7" data-name="collares" data-category="ACCESORIOS" data-price="300"
+                    data-image="images/perros collares varios.jpg" data-category="2">
+                    <div class="produc-img-container">
+                      <img src="./perros collares varios.jpg" alt="" class="product-img">
+                    </div>
+                
+                  <div class="product-body">
+                     <div class="product-content">
+                          <h3 class="product-name">collares</h3>
+                          <p class="product-price">$ 300</p>
+                          <p class="product-description">
+                              collares. diseño y color a elegir
+                              elegantes, resistentes.
+                          </p>
+                         <div class="review">
+                                <i class="fas fa-star" aria-hidden="true"></i>
+                                <i class="fas fa-star" aria-hidden="true"></i>
+                                <i class="far fa-star" aria-hidden="true"></i>
+                                <i class="far fa-star" aria-hidden="true"></i>
+                               <i class="far fa-star" aria-hidden="true"></i>
+                           </div>
+                       </div>
+                     <div class="product-actions">
+                         <button type="button" class="button button-default add-to-cart-btn" tabindex="0">
+                              Comprar
+                          </button>
+                     </div>
+                 </div>
+                </article>
+            <article class="product" data-id="8" data-name="comida pro plan " data-category="COMIDA" data-price="999"
+                data-image="images/comida perros.png" data-review="4">
+                <div class="product-img-container">
+                    <img src="./COMIDA PERROS.jpg" alt="" class="product-img">
+                </div>
+                <div class="product-body">
+                    <div class="product-content">
+                        <h3 class="product-name">pro plan</h3>
+                        <p class="product-price">$ 999</p>
+                        <p class="product-description">
+                            comida pro plan, calidad
+                            perros grandes y cachorros
+                        </p>
+                        <div class="review">
+                            <i class="fas fa-star" aria-hidden="true"></i>
+                            <i class="fas fa-star" aria-hidden="true"></i>
+                            <i class="fas fa-star" aria-hidden="true"></i>
+                            <i class="fas fa-star" aria-hidden="true"></i>
+                            <i class="far fa-star" aria-hidden="true"></i>
+                        </div>
+                    </div>
+                    <div class="product-actions">
+                        <button type="button" class="button button-default add-to-cart-btn" tabindex="0">
+                            Comprar
+                        </button>
+                    </div>
+                </div>
+            </article>
+            <article class="product" data-id="9" data-name="busito" data-category="ROPA" data-price="999"
+                data-image="images/ropa perros.jpeg" data-review="3">
+                <div class="product-img-container">
+                    <img src="./ropa perros.jpeg" alt="" class="product-img">
+                </div>
+                <div class="product-body">
+                    <div class="product-content">
+                        <h3 class="product-name">buso </h3>
+                        <p class="product-price">$ 999</p>
+                        <p class="product-description">
+                            Busito para mascota, todos los talles
+                            100% algodon
+                        </p>
+                        <div class="review">
+                            <i class="fas fa-star" aria-hidden="true"></i>
+                            <i class="fas fa-star" aria-hidden="true"></i>
+                            <i class="fas fa-star" aria-hidden="true"></i>
+                            <i class="far fa-star" aria-hidden="true"></i>
+                            <i class="far fa-star" aria-hidden="true"></i>
+                        </div>
+                    </div>
+                    <div class="product-actions">
+                        <button type="button" class="button button-default add-to-cart-btn" tabindex="0">
+                            Comprar
+                        </button>
+                    </div>
+                </div>
+            </article>
+            <article class="product" data-id="10" data-name="cama dos pisos " data-category="CAMAS" data-price="1699"
+                data-image="images/cama perros.jpg" data-review="4">
+                <div class="product-img-container">
+                    <img src="./cama perros.jpeg" alt="" class="product-img">
+                </div>
+                <div class="product-body">
+                    <div class="product-content">
+                        <h3 class="product-name">cama </h3>
+                        <p class="product-price">$ 1699</p>
+                        <p class="product-description">
+                            Cama dos pisos , reforzado, varios colores
+                        </p>
+                        <div class="review">
+                            <i class="fas fa-star" aria-hidden="true"></i>
+                            <i class="fas fa-star" aria-hidden="true"></i>
+                            <i class="fas fa-star" aria-hidden="true"></i>
+                            <i class="fas fa-star" aria-hidden="true"></i>
+                            <i class="far fa-star" aria-hidden="true"></i>
+                        </div>
+                    </div>
+                    <div class="product-actions">
+                        <button type="button" class="button button-default add-to-cart-btn" tabindex="0">
+                            Comprar
+                        </button>
+                    </div>
+                </div>
+            </article>
+            <article class="product" data-id="11" data-name="cama simple" data-category="CAMAS" data-price="1200"
+                data-image="images/mouse.jpg" data-review="5">
+                <div class="product-img-container">
+                    <img src="./cama.jpeg" alt="" class="product-img">
+                </div>
+                <div class="product-body">
+                    <div class="product-content">
+                        <h3 class="product-name"> cama simple</h3>
+                        <p class="product-price">$ 1200</p>
+                        <p class="product-description">
+                            cama simple, precio accesible, varios colores.
+                        </p>
+                        <div class="review">
+                            <i class="fas fa-star" aria-hidden="true"></i>
+                            <i class="fas fa-star" aria-hidden="true"></i>
+                            <i class="fas fa-star" aria-hidden="true"></i>
+                            <i class="fas fa-star" aria-hidden="true"></i>
+                            <i class="fas fa-star" aria-hidden="true"></i>
+                        </div>
+                    </div>
+                    <div class="product-actions">
+                        <button type="button" class="button button-default add-to-cart-btn" tabindex="0">
+                            Comprar
+                        </button>
+                    </div>
+                </div>
+            </article>
+            </div>
+        </section>
+    </main>
+    <!-- ================= [ Fin Productos ] ================= -->
+
+    <!-- ================= [ Inicio Footer ] ================= -->
+    <footer>
+        <div class="logo-container">
+            <img src="./perrito.png" alt="" aria-hidden="true" class="logo">
+            <p>UMA SHOP - Gracias por visitarnos💚</p>
+        </div>
+    </footer>
+
+    <!-- ================= [ Fin Footer ] ================= -->
+
+    <!-- ================= [ Comienzo Carrito ] ================= -->
+    <section id="cart" class="cart" aria-role="dialog" aria-modal="true" aria-hidden="true"
+        aria-labelledby="cart-heading">
+        <header>
+            <h2 id="cart-heading">Carrito</h2>
+            <button type="button" class="close-cart-btn" aria-label="Cerrar carrito" tabindex="0">
+                <i class="fas fa-times" aria-hidden="true"></i>
+            </button>
+        </header>
+        <div class="cart-filled hidden">
+            <p class="cart-products-qty">0 producto(s) agregado(s)</p>
+            <div class="cart-products-added"></div>
+            <p class="cart-subtotal">Subtotal <span class="value">$0</span></p>
+            <button type="button" class="button button-success buy-btn" tabindex="0">
+                Comprar
+            </button>
+            <button type="button" class="button button-danger-outlined cart-empty-btn" tabindex="0">
+                Vaciar
+            </button>
+        </div>
+        <div class="cart-empty">
+            <p class="cart-empty-message">
+                No tienes productos en el carrito, ¡agrega algunos!
+            </p>
+        </div>
+    </section>
+    <!-- Fin Carrito  -->
+
+    <div class="overlay hidden">
+        <!--  Comienzo Modal VaciarCarrito -->
+        <div class="modal modal-empty-cart hidden" aria-role="dialog" aria-modal="true"
+            aria-describedby="empty-cart-description" aria-hidden="true">
+            <p class="modal-message" id="empty-cart-description">
+                Estás por vaciar el carrito, ¿quieres continuar?
+            </p>
+            <footer class="modal-actions">
+                <button type="button" class="button button-default cancel-empty-cart-btn" tabindex="0">
+                    Cancelar
+                </button>
+                <button type="button" class="button button-danger confirm-cart-empty-btn" tabindex="0">
+                    Vaciar
+                </button>
+            </footer>
+        </div>
+        <!-- Fin Diálogo Vaciar Carrito -->
+
+        <!-- Comienzo Checkout -->
+        <div class="modal checkout hidden" aria-role="dialog" aria-modal="true" aria-hidden="true">
+            <h2 class="modal-title">Checkout</h2>
+            <div class="flex-container">
+                <form class="checkout-info" id="checkout-form">
+                    <div class="checkout-personal-info">
+                        <h3>Datos Personales</h3>
+                        <div class="checkout-section-container">
+                            <div class="checkout-personal-info-inputs">
+                                <label>
+                                    Nombre y apellido *
+                                    <input type="text" placeholder="p. ej.: Ada Lovelace" name="Nombre y Apellido"
+                                        required="" tabindex="0">
+                                </label>
+                                <label>
+                                    Email *
+                                    <input type="email" placeholder="p. ej.: ada.lovelace@gmail.com" required=""
+                                        tabindex="0">
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!---- Comiezo Opciones de Pago  -->
+                    <div class="checkout-payment">
+                        <h3>Opciones de pago</h3>
+                        <div class="checkout-section-container">
+                            <div class="checkout-payment-options">
+                                <label>
+                                    <input type="radio" name="payment" value="cash-debit" checked=""
+                                        tabindex="0">Efectivo / Débito
+                                </label>
+                                <label>
+                                    <input type="radio" name="payment" value="credit" tabindex="0">Tarjeta
+                                    de crédito
+                                </label>
+                                <label>
+                                    <input type="checkbox" name="delivery" tabindex="0"> Necesito envío
+                                </label>
+                                <label>
+                                    <input type="checkbox" name="discount" tabindex="0"> Tengo tarjeta de
+                                    descuento
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+                <!-- Fin Opciones de Pago  -->
+
+                <!--  Comienzo Subtotales  -->
+                <section class="cart-totals">
+                    <h3 class="cart-totals-title">Resumen</h3>
+                    <div>
+                        <p class="cart-subtotal">
+                            Subtotal <span class="cart-subtotal-value">$0</span>
+                        </p>
+                        <p class="cart-discount">
+                            Descuento 10% <span class="cart-discount-value">$0</span>
+                        </p>
+                        <p class="cart-delivery">
+                            Envío <span class="cart-delivery-value">$0</span>
+                        </p>
+                        <p class="cart-tax">
+                            Recargo <span class="cart-tax-value">$0</span>
+                        </p>
+                        <p class="cart-total">
+                            Total: <span class="cart-total-value">$0</span>
+                        </p>
+                    </div>
+                </section>
+                <!--  Fin Subtotales  -->
+            </div>
+            <footer class="modal-actions">
+                <button type="button" class="button button-default cancel-buy-btn" tabindex="0">
+                    Seguir comprando
+                </button>
+                <button type="submit" class="button button-success finish-buy-btn" form="checkout-form" tabindex="0">
+                    Finalizar
+                </button>
+            </footer>
+        </div>
+    </div>
+    <!--  Fin Checkout -->
+
+    <div class="overlay-sidebar hidden"></div>
+
+
+</body>
